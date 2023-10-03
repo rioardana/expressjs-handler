@@ -47,6 +47,7 @@ app.get('/api/customers', (req, res) =>{
 
 // create handling http POST for api customers
 app.post('/api/customers', LoggerMiddleware, (req, res) => {
+  console.log(req.body);
   const {name, email, role} = req.body;
 
   // res.send(`thankyou, ${name} with email: ${email} and role: ${role} we have received your submission`);
